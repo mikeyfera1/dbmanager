@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBManager - Upload Live Stats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="upload-header">
+            <h2>DB<span>MANAGER</span></h2>
+            <p>Upload Live Stats</p>
+        </div>
+
+        <form id="driveStats">
+            <div class="input-card">
+                <div class="input-card-header">Player</div>
+                <div class="input-grid">
+                    <div class="input-cell full">
+                        <label>DBFL ID</label>
+                        <input type="text" class="stat-num-input" id="dbflId" placeholder="e.g. 0042">
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-card">
+                <div class="input-card-header"><span class="accent">Passing</span></div>
+                <div class="input-grid">
+                    <div class="input-cell">
+                        <label>Pass TDs</label>
+                        <input type="text" class="stat-num-input" id="passTDs" placeholder="0">
+                    </div>
+                    <div class="input-cell">
+                        <label>Pass YDs</label>
+                        <input type="text" class="stat-num-input" id="passYDs" placeholder="0">
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-card">
+                <div class="input-card-header"><span class="accent-green">Receiving</span></div>
+                <div class="input-grid">
+                    <div class="input-cell">
+                        <label>Rec TDs</label>
+                        <input type="text" class="stat-num-input" id="recTDs" placeholder="0">
+                    </div>
+                    <div class="input-cell">
+                        <label>Rec YDs</label>
+                        <input type="text" class="stat-num-input" id="recYDs" placeholder="0">
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-card">
+                <div class="input-card-header">Turnovers</div>
+                <div class="input-grid">
+                    <div class="input-cell">
+                        <label>OFF INTs</label>
+                        <input type="text" class="stat-num-input" id="offINTs" placeholder="0">
+                    </div>
+                    <div class="input-cell">
+                        <label>DEF INTs</label>
+                        <input type="text" class="stat-num-input" id="defINTs" placeholder="0">
+                    </div>
+                </div>
+            </div>
+
+            <div class="submit-wrap">
+                <button type="submit" class="btn btn-primary">Submit Stats</button>
+            </div>
+        </form>
+
+        <p id="statusMessage"></p>
+    </div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
