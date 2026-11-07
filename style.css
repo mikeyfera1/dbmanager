@@ -1,18 +1,18 @@
 :root {
-  --red: #cc1a1a;
-  --red-bright: #e82020;
-  --cream: #e8dfc8;
-  --black: #0a0a0a;
-  --dark: #111111;
-  --mid: #181818;
-  --card: #1e1e1e;
-  --border: #2a2a2a;
-  --border-light: #333;
-  --muted: #555;
-  --text-muted: #888;
-  --green: #3a8a3a;
-  --green-bright: #4caf50;
-  --blue: #4a9eff;
+  --red: #bc7227;            /* burnt orange: primary accent */
+  --red-bright: #d98a3a;     /* lighter pumpkin for hover */
+  --cream: #f0e2c4;          /* warm cream text */
+  --black: #120c07;          /* espresso page background */
+  --dark: #1a110a;
+  --mid: #22170e;
+  --card: #2a1c11;           /* chestnut card */
+  --border: #3d2a18;
+  --border-light: #55391f;
+  --muted: #8a6a4a;          /* label brown */
+  --text-muted: #b09470;     /* tan */
+  --green: #6b6b2a;          /* olive */
+  --green-bright: #a3a63a;   /* harvest olive */
+  --blue: #d4a437;           /* harvest gold (replaces blue) */
   --font-display: 'Bebas Neue', sans-serif;
   --font-condensed: 'Barlow Condensed', sans-serif;
   --font-body: 'Barlow', sans-serif;
@@ -22,7 +22,8 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: var(--black);
+  background: radial-gradient(ellipse at top, #2a1809 0%, var(--black) 60%);
+  background-attachment: fixed;
   color: var(--cream);
   font-family: var(--font-body);
   min-height: 100vh;
@@ -32,7 +33,7 @@ body {
 
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
 
 .page { max-width: 480px; margin: 0 auto; padding: 32px 16px 40px; }
 
@@ -62,7 +63,7 @@ body {
 
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 20px; border: none; border-radius: 3px; font-family: var(--font-display); font-size: 16px; letter-spacing: 0.15em; cursor: pointer; transition: all 0.15s; text-decoration: none; }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-.btn-primary { background: var(--red); color: var(--cream); width: 100%; }
+.btn-primary { background: var(--red); color: var(--black); width: 100%; }
 .btn-primary:hover:not(:disabled) { background: var(--red-bright); }
 
 #statusMessage { font-family: var(--font-condensed); font-size: 13px; letter-spacing: 0.1em; color: var(--text-muted); text-align: center; margin-top: 16px; }

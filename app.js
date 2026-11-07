@@ -34,8 +34,10 @@ function getDateId() {
 
 // Function to update the firestore database
 async function submitStats(playerId, statsData) {
-    // 5 for the fifth season of the DBFL
-    const seasonId = "5_" + playerId;
+    
+    // Prefix for current season - Current: TURKEY BOWL
+    const SEASON_PREFIX = "TURKEY_"
+    const seasonId = SEASON_PREFIX + playerId;
     const gameId = getDateId();
 
     const playerRef = doc(db, "players", playerId);
